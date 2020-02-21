@@ -8,7 +8,7 @@
 Flashcards is a rudimentary app that allows the user to view a question, and then tap the flashcard to see the answer. Get ready for some budgie trivia!
 
 ### App Walk-though
-<img src="http://www.giphy.com/gifs/cOc5XDh8HTZurM4mNo" width=200><br>
+<img src="https://gph.is/g/4DgozWw" width=200><br>
 
 `TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 

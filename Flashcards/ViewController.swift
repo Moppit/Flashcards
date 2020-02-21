@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var question_label: UILabel!
+    @IBOutlet weak var answer_label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func didTapOnFlash(_ sender: Any) {
+        question_label.isHidden = true
+    }
+    
 }
 

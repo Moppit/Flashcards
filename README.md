@@ -1,6 +1,22 @@
 ## Flashcards
 
-📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
+## Lab 2
+
+### App Description
+Update! Flashcards now has entering custom questions functionality. Quiz yourself on anything you like!
+
+### App Walk-though
+<img src="https://media.giphy.com/media/mFA6uDHk0kmwX6zjzE/giphy.gif" width=200><br>
+
+## Required
+- [X] User can open the creation screen
+- [X] User can cancel out of the creation screen
+- [X] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [X] Push code to GitHub
+## Optional
+- [ ] User gets an error if they try to create a new flashcard with no question or answer
+- [ ] User can edit existing flashcard
+- [ ] User can add multiple choice answers in the creation screen
 
 ## Lab 1
 

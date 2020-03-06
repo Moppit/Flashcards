@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85580314240AEBBF00F7C709 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85580313240AEBBF00F7C709 /* CreationViewController.swift */; };
 		85F8907223F8797600FBC565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8907123F8797600FBC565 /* AppDelegate.swift */; };
 		85F8907423F8797600FBC565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F8907323F8797600FBC565 /* ViewController.swift */; };
 		85F8907723F8797600FBC565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F8907523F8797600FBC565 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85580313240AEBBF00F7C709 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 		85F8906E23F8797600FBC565 /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F8907123F8797600FBC565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F8907323F8797600FBC565 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		85F8906523F8797500FBC565 = {
 			isa = PBXGroup;
 			children = (
+				85580313240AEBBF00F7C709 /* CreationViewController.swift */,
 				85F8907023F8797600FBC565 /* Flashcards */,
 				85F8908523F8797900FBC565 /* FlashcardsTests */,
 				85F8909023F8797900FBC565 /* FlashcardsUITests */,
@@ -258,6 +261,7 @@
 			files = (
 				85F8907423F8797600FBC565 /* ViewController.swift in Sources */,
 				85F8907223F8797600FBC565 /* AppDelegate.swift in Sources */,
+				85580314240AEBBF00F7C709 /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

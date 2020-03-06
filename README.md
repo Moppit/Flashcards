@@ -6,9 +6,7 @@
 Update! Flashcards now has entering custom questions functionality. Quiz yourself on anything you like!
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
-
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="https://media.giphy.com/media/mFA6uDHk0kmwX6zjzE/giphy.gif" width=200><br>
 
 ## Required
 - [X] User can open the creation screen

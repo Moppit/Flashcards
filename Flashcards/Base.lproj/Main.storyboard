@@ -44,9 +44,10 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J88-Ee-O8R">
-                                <rect key="frame" x="163" y="529" width="46" height="30"/>
+                                <rect key="frame" x="171" y="517" width="30" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="YBj-Vs-Byd" kind="presentation" id="EPk-4b-Zmb"/>
                                 </connections>

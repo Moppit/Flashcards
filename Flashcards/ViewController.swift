@@ -28,7 +28,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        updateFlashcard(question: "What color is the typical female budgie's cere?", answer: "Pink or reddish brown")
+        readSavedFlashcards()
+        if flashcards.count == 0 {
+            updateFlashcard(question: "What color is the typical female budgie's cere?", answer: "Pink or reddish brown")
+        }
+        else {
+            updateLabels()
+            updateNextPrevButtons()
+        }
     }
     
     // Need to figure out what this does and how it does it
@@ -51,6 +58,23 @@ class ViewController: UIViewController {
         iterator += 1
     }
     
+    func saveAllFlashcardsToDisk(){
+        let dictionaryArray = flashcards.map { (card) -> [String: String] in
+            return ["question": card.question, "answer": card.answer]
+        }
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
+        print("Flashcards saved to UserDefaults")
+    }
+    
+    func readSavedFlashcards(){
+        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]] {
+            let savedCards = dictionaryArray.map { dictionary -> Flashcard in
+                return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+            }
+            flashcards.append(contentsOf: savedCards)
+        }
+    }
+    
     func updateFlashcard(question: String, answer: String) {
         let flashcard = Flashcard(question: question, answer: answer)
         flashcards.append(flashcard)
@@ -61,6 +85,7 @@ class ViewController: UIViewController {
         
         updateNextPrevButtons()
         updateLabels()
+        saveAllFlashcardsToDisk()
     }
     
     func updateLabels(){

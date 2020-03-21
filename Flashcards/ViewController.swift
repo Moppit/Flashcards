@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var answer_label: UILabel!
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var card: UIView!
     
     var iterator = 0
     var flashcards = [Flashcard]()
@@ -46,16 +47,38 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlash(_ sender: Any) {
-        // Flip for both sides
-        if(iterator % 2 == 0)
-        {
-            question_label.isHidden = true
+        flipFlashcard()
+    }
+    
+    func flipFlashcard(){
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            // Flip for both sides
+            if(self.iterator % 2 == 0)
+            {
+                self.question_label.isHidden = true
+            }
+            else
+            {
+                self.question_label.isHidden = false
+            }
+            self.iterator += 1
+        })
+    }
+    
+    // Animation Functions
+    func animateCardOut(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion:{ finished in
+            self.updateLabels()
+            self.animateCardIn()
+        })
+    }
+    func animateCardIn(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0)
+        UIView.animate(withDuration: 0.3){
+            self.card.transform = CGAffineTransform.identity
         }
-        else
-        {
-            question_label.isHidden = false
-        }
-        iterator += 1
     }
     
     func saveAllFlashcardsToDisk(){
@@ -102,7 +125,7 @@ class ViewController: UIViewController {
     
     @IBAction func didTapOnNext(_ sender: Any) {
         currentIndex = currentIndex + 1
-        updateLabels()
+        animateCardOut()
         updateNextPrevButtons()
     }
     

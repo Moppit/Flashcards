@@ -41,27 +41,28 @@
                                     <outletCollection property="gestureRecognizers" destination="oDn-Ag-dPQ" appends="YES" id="1Lp-A1-Y8T"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J88-Ee-O8R">
-                                <rect key="frame" x="171" y="517" width="30" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J88-Ee-O8R">
+                                <rect key="frame" x="154" y="515" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" image="addButton"/>
                                 <connections>
                                     <segue destination="YBj-Vs-Byd" kind="presentation" id="EPk-4b-Zmb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZa-1Y-afP">
-                                <rect key="frame" x="302" y="532" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZa-1Y-afP">
+                                <rect key="frame" x="286" y="515" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" image="arrowRight"/>
+                                <state key="disabled" image="arrowRightDisabled"/>
                                 <connections>
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfh-7K-Mwz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3r-hg-FA7">
-                                <rect key="frame" x="44" y="532" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3r-hg-FA7">
+                                <rect key="frame" x="28" y="515" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prev"/>
+                                <state key="normal" image="arrowLeft"/>
+                                <state key="disabled" image="arrowLeftDisabled"/>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nza-Ld-B2S"/>
                                 </connections>
@@ -72,6 +73,7 @@
                     </view>
                     <connections>
                         <outlet property="answer_label" destination="YQ2-9W-an8" id="zIz-rG-hsh"/>
+                        <outlet property="card" destination="x4T-l6-PfT" id="QLE-SJ-WeW"/>
                         <outlet property="nextButton" destination="aZa-1Y-afP" id="xBR-r5-Xrt"/>
                         <outlet property="prevButton" destination="J3r-hg-FA7" id="bNe-UF-bPn"/>
                         <outlet property="question_label" destination="NRG-0Q-sRm" id="2Yp-RJ-1iY"/>
@@ -164,4 +166,11 @@
             <point key="canvasLocation" x="805.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addButton" width="64" height="64"/>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowLeftDisabled" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
+        <image name="arrowRightDisabled" width="64" height="64"/>
+    </resources>
 </document>

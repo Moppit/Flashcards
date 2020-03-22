@@ -80,6 +80,20 @@ class ViewController: UIViewController {
             self.card.transform = CGAffineTransform.identity
         }
     }
+    func animateCardOutPrev(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        }, completion:{ finished in
+            self.updateLabels()
+            self.animateCardInPrev()
+        })
+    }
+    func animateCardInPrev(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0)
+        UIView.animate(withDuration: 0.3){
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
     
     func saveAllFlashcardsToDisk(){
         let dictionaryArray = flashcards.map { (card) -> [String: String] in
@@ -119,7 +133,8 @@ class ViewController: UIViewController {
     
     @IBAction func didTapOnPrev(_ sender: Any) {
         currentIndex = currentIndex - 1
-        updateLabels()
+        //updateLabels()
+        animateCardOutPrev()
         updateNextPrevButtons()
     }
     
